@@ -5,4 +5,6 @@ bin/testTableEntry: testTableEntry.cpp TableEntry.h
 
 clean:
 	rm -rf *.o *.gch *.pch bin
-
+bin/testHashTable: testHashTable.cpp HashTable.h Dict.h TableEntry.h
+	mkdir -p bin
+	g++ -o bin/testHashTable testHashTable.cpp
